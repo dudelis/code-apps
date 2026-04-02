@@ -1,0 +1,73 @@
+{
+  "version": "1.0",
+  "appId": "d1343c3b-4b66-4b9c-8164-25a3680a5a97",
+  "appDisplayName": "Executive Briefing Manager",
+  "region": "prod",
+  "environmentId": "7edee57a-8151-e291-9c30-d0418c88af4d",
+  "description": "",
+  "buildPath": "./dist",
+  "buildEntryPoint": "index.html",
+  "localAppUrl": "http://localhost:3000",
+  "logoPath": "Default",
+  "connectionReferences": {
+    "4ee2ec49-7abc-4b13-918a-d34854ca16a9": {
+      "id": "/providers/Microsoft.PowerApps/apis/shared_office365",
+      "displayName": "Office 365 Outlook",
+      "dataSources": [
+        "office365"
+      ],
+      "dataSets": {}
+    },
+    "2a0641d0-ba81-4dfd-ba43-463349e0df59": {
+      "id": "/providers/Microsoft.PowerApps/apis/shared_office365users",
+      "displayName": "Office 365 Users",
+      "dataSources": [
+        "office365users"
+      ],
+      "dataSets": {}
+    }
+  },
+  "databaseReferences": {
+    "default.cds": {
+      "dataSources": {
+        "ebmmeetings": {
+          "entitySetName": "crad2_ebmmeetings",
+          "logicalName": "crad2_ebmmeeting"
+        },
+        "ebmcontacts": {
+          "entitySetName": "crad2_ebmcontacts",
+          "logicalName": "crad2_ebmcontact"
+        },
+        "ebmactionitems": {
+          "entitySetName": "crad2_ebmactionitems",
+          "logicalName": "crad2_ebmactionitem"
+        },
+        "ebmmeetingparticipants": {
+          "entitySetName": "crad2_ebmmeetingparticipants",
+          "logicalName": "crad2_ebmmeetingparticipant"
+        },
+        "ebmbriefingphases": {
+          "entitySetName": "crad2_ebmbriefingphases",
+          "logicalName": "crad2_ebmbriefingphase"
+        },
+        "ebmmailartifacts": {
+          "entitySetName": "crad2_ebmmailartifacts",
+          "logicalName": "crad2_ebmmailartifact"
+        },
+        "ebmsocialinsights": {
+          "entitySetName": "crad2_ebmsocialinsights",
+          "logicalName": "crad2_ebmsocialinsight"
+        },
+        "ebmweeklyhighlights": {
+          "entitySetName": "crad2_ebmweeklyhighlights",
+          "logicalName": "crad2_ebmweeklyhighlight"
+        },
+        "ebmaudiobriefings": {
+          "entitySetName": "crad2_ebmaudiobriefings",
+          "logicalName": "crad2_ebmaudiobriefing"
+        }
+      },
+      "environmentVariableName": ""
+    }
+  }
+}
