@@ -6,23 +6,26 @@ import {
 } from 'react';
 import type { Meeting } from '../types';
 
-export type Role = 'officer' | 'executive';
+export type Role = 'officer' | 'executive' | 'test';
 
 interface AppState {
   role: Role;
   activeMeeting: Meeting | null;
   overlayIsOpen: boolean;
+  securityRoles: string[];
 }
 
 type AppAction =
   | { type: 'SET_ROLE'; payload: Role }
   | { type: 'OPEN_MEETING'; payload: Meeting }
-  | { type: 'CLOSE_MEETING' };
+  | { type: 'CLOSE_MEETING' }
+  | { type: 'SET_SECURITY_ROLES'; payload: string[] };
 
 const initialState: AppState = {
   role: 'officer',
   activeMeeting: null,
   overlayIsOpen: false,
+  securityRoles: [],
 };
 
 function appReducer(state: AppState, action: AppAction): AppState {
@@ -33,6 +36,8 @@ function appReducer(state: AppState, action: AppAction): AppState {
       return { ...state, activeMeeting: action.payload, overlayIsOpen: true };
     case 'CLOSE_MEETING':
       return { ...state, activeMeeting: null, overlayIsOpen: false };
+    case 'SET_SECURITY_ROLES':
+      return { ...state, securityRoles: action.payload };
     default:
       return state;
   }

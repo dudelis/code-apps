@@ -68,6 +68,20 @@ export const dataSourcesInfo = {
     "dataSourceType": "Dataverse",
     "apis": {}
   },
+  "systemusers": {
+    "tableId": "",
+    "version": "",
+    "primaryKey": "systemuserid",
+    "dataSourceType": "Dataverse",
+    "apis": {}
+  },
+  "roles": {
+    "tableId": "",
+    "version": "",
+    "primaryKey": "roleid",
+    "dataSourceType": "Dataverse",
+    "apis": {}
+  },
   "office365": {
     "tableId": "",
     "version": "",

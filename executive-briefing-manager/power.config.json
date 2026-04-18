@@ -65,6 +65,14 @@
         "ebmaudiobriefings": {
           "entitySetName": "crad2_ebmaudiobriefings",
           "logicalName": "crad2_ebmaudiobriefing"
+        },
+        "systemusers": {
+          "entitySetName": "systemusers",
+          "logicalName": "systemuser"
+        },
+        "roles": {
+          "entitySetName": "roles",
+          "logicalName": "role"
         }
       },
       "environmentVariableName": ""

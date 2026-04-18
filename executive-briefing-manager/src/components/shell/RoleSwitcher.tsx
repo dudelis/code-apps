@@ -1,12 +1,16 @@
 import { useRole } from '../../hooks/useRole';
+import { useAppContext } from '../../context/AppContext';
 import type { Role } from '../../context/AppContext';
 
 export function RoleSwitcher() {
   const { role, setRole } = useRole();
+  const { state } = useAppContext();
+  const isSystemAdmin = state.securityRoles.includes('System Administrator');
 
   const options: { value: Role; label: string }[] = [
     { value: 'officer', label: 'Customer Officer' },
-    { value: 'executive', label: 'Executive' },
+    ...(isSystemAdmin ? [{ value: 'executive' as Role, label: 'Executive' }] : []),
+    { value: 'test', label: 'Test' },
   ];
 
   return (

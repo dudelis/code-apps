@@ -3,6 +3,7 @@ import { MetricsRow } from './MetricsRow';
 import { BriefingCarousel } from './BriefingCarousel';
 import { UpcomingHighlights } from './UpcomingHighlights';
 import { PodcastPlayer } from './PodcastPlayer';
+import { AiChat } from './AiChat';
 
 export function ExecutiveDashboard() {
   return (
@@ -13,6 +14,7 @@ export function ExecutiveDashboard() {
         <BriefingCarousel />
         <UpcomingHighlights />
         <PodcastPlayer />
+        <AiChat />
       </div>
     </div>
   );
